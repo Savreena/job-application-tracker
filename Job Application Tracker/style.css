@@ -1,0 +1,206 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6f94b6, #8faee0);
+  padding: 20px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #4f6ef7;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Filter */
+#filterStatus {
+  margin-bottom: 15px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Table header */
+thead {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+thead th {
+  padding: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Table rows */
+tbody td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Row hover */
+tbody tr:hover {
+  background-color: #f3f6ff;
+}
+
+/* Status dropdown */
+td select {
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Delete button */
+td button {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+/* Status badges */
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Individual status colors */
+.status-applied {
+  background-color: #4f6ef7; /* blue */
+}
+
+.status-interview {
+  background-color: #8e44ad; /* purple */
+}
+
+.status-rejected {
+  background-color: #e74c3c; /* red */
+}
+
+.status-offer {
+  background-color: #27ae60; /* green */
+}
+
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Reminder banner */
+.reminder-banner {
+  position: sticky;
+  top: 12px;
+
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+
+  padding: 14px 20px;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+
+  animation: slideDown 0.4s ease;
+}
+
+/* Hide banner */
+.hidden {
+  display: none;
+}
+
+/* Banner text */
+.reminder-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icon */
+.reminder-icon {
+  font-size: 20px;
+}
+
+/* Close button */
+.reminder-close {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.reminder-close:hover {
+  opacity: 1;
+}
+
+/* Slide animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.reminder-text {
+  max-height: 120px;
+  overflow-y: auto;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="reminderBanner" class="reminder-banner hidden">
+  <div class="reminder-text" id="reminderMessage"></div>
+  <button class="reminder-close" onclick="closeReminder()">✕</button>
+</div>
+
+
+     <h1>Job Application Tracker</h1>
+
+     <form id="jobForm">
+           <input type="text" id="company" placeholder="Company Name" required>
+           <input type="text" id="role" placeholder="Job Role" required>
+
+               <select id="status">
+                
+                <option value="">Select Status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Offer">Offer</option>
+               
+               </select>
+
+                   <input type="date" id="dateApplied">
+
+                   <input type="text" id="notes" placeholder="Notes (optional)">
+ 
+                   <button type="submit">Add Job</button>
+
+       </form>
+
+       <select id="filterStatus">
+  <option value="All">All</option>
+  <option value="Applied">Applied</option>
+  <option value="Interview">Interview</option>
+  <option value="Rejected">Rejected</option>
+  <option value="Offer">Offer</option>
+</select>
+
+<button id="clearFilter">Clear Filter</button>
+
+                  <table>
+                    <thead>
+                       <tr>
+                           <th>Company</th>
+                           <th>Role</th>
+                           <th>Status</th>
+                           <th>Date Applied</th>
+                           <th>Notes</th>
+                           <th>Action</th>
+                       </tr>
+                    </thead>
+                            <tbody id="jobList">
+                            <!-- Jobs will appear here -->
+                            </tbody>
+                  </table>
+                  
+                  <script src="script.js"></script>
+
+</body>
+</html>
